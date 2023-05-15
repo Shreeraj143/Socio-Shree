@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Show</title>
+  </head>
+  <body>
+    <ul>
+      <li>Name: <%= post.admin %></li>
+      <li>Image: <%= post.image %></li>
+      <li>Comment: <%= post.comments %></li>
+      <li>Caption: <%= post.caption %></li>
+    </ul>
+    <form action="/feed/<%= post._id %>?_method=DELETE" method="POST">
+      <button>Delete</button>
+    </form>
+    <a href="/feed">My Feed</a>
+    <a href="/feed/<%= post._id %>/edit">Edit Post</a>
+  </body>
+</html>

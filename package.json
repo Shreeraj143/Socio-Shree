@@ -1,0 +1,22 @@
+{
+  "name": "project-4-social-media-website",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "shreeraj",
+  "license": "ISC",
+  "dependencies": {
+    "connect-flash": "^0.1.1",
+    "ejs-mate": "^4.0.0",
+    "express": "^4.18.2",
+    "express-session": "^1.17.3",
+    "method-override": "^3.0.0",
+    "mongoose": "^7.1.0",
+    "passport": "^0.6.0",
+    "passport-local-mongoose": "^8.0.0",
+    "path": "^0.12.7"
+  }
+}

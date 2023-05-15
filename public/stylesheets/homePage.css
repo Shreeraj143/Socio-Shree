@@ -1,0 +1,312 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Roboto:wght@300;400;500;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+}
+
+body {
+  background: #000;
+  font-family: "Roboto", sans-serif;
+}
+
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 1.5rem 12.5%;
+  background: transparent;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 100;
+}
+
+.background {
+  width: 100%;
+  height: 100vh;
+  background: url("../images/background.jpg") center center/cover no-repeat;
+  filter: blur(10px);
+}
+
+.navbar {
+  display: flex;
+  gap: 2rem;
+}
+
+.nav-link {
+  position: relative;
+  padding: 0.25rem 0;
+  font-size: 1.3rem;
+  color: #e4e4e4;
+  font-weight: 500;
+}
+
+.navbar a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -6px;
+  width: 100%;
+  height: 2px;
+  background: #e4e4e4;
+  border-radius: 5px;
+  opacity: 0;
+  transform: translateY(10px);
+  transition: 300ms;
+}
+
+.nav-link:hover::after {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+.search-bar {
+  width: 15.7;
+  height: 2.8rem;
+  background: transparent;
+  border: 2px solid #e4e4e4;
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+}
+
+.search-bar input {
+  width: 100%;
+  background: transparent;
+  border: none;
+  outline: none;
+  font-size: 1.3rem;
+  padding-left: 0.7rem;
+  color: #e4e4e4;
+}
+
+.search-bar input::placeholder {
+  color: #e4e4e4;
+}
+
+.search-bar button {
+  width: 40px;
+  height: 100%;
+  background: transparent;
+  border: none;
+  outline: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.search-bar button i {
+  font-size: 1.6rem;
+  color: #e4e4e4;
+}
+
+.container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 75%;
+  height: 550px;
+  background: url("../images/background.jpg") center center/cover no-repeat;
+  border-radius: 1rem;
+  margin-top: 1.3rem;
+  opacity: 0.8;
+}
+
+.container .content {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 58%;
+  height: 100%;
+  background: transparent;
+  padding: 4rem;
+  color: #e4e4e4;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.container .logo {
+  font-size: 1.9rem;
+}
+
+.text-sci h2 {
+  font-size: 2.2rem;
+  line-height: 1;
+}
+
+.text-sci h2 span {
+  font-size: 1.6rem;
+}
+
+.social-icons {
+  margin-top: 1.3rem;
+}
+
+.social-icons .icons {
+  display: inline-block;
+  font-size: 1.55rem;
+  color: #e4e4e4;
+  margin-right: 1rem;
+  transition: 300ms ease;
+}
+
+.social-icons .icons:hover {
+  transform: scale(1.5);
+}
+
+.container .logreg-box {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: calc(100% - 58%);
+  height: 100%;
+  overflow: hidden;
+}
+
+.logreg-box .form-box {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  background: transparent;
+  backdrop-filter: blur(1.5rem);
+  border-top-right-radius: 1rem;
+  border-bottom-right-radius: 1rem;
+  color: #e4e4e4;
+}
+
+.logreg-box .form-box.login {
+  transform: translateX(0px);
+  transition: transform 600ms ease;
+  transition-delay: 300ms;
+}
+
+.logreg-box .form-box.register {
+  transform: translateX(460px);
+  transition: transform 0.5s ease;
+}
+
+/* If logreg-box is active then login will go away by 460px and as overflow is hidden on logreg box
+we will not see login box. Now as logreg-box is active register box will move to 0px i.e it will become visible */
+.logreg-box.active .form-box.login {
+  transform: translateX(460px);
+  transition: transform 0.5s ease;
+}
+
+.logreg-box.active .form-box.register {
+  transform: translateX(0px);
+  transition-delay: 300ms;
+}
+
+.form-box h2 {
+  font-size: 2rem;
+  text-align: center;
+}
+
+.form-box .input-box {
+  position: relative;
+  width: 340px;
+  height: 50px;
+  border-bottom: 2px solid #e4e4e4;
+  margin: 2rem 0;
+}
+
+.input-box input {
+  background: transparent;
+  width: 100%;
+  height: 100%;
+  outline: none;
+  border: none;
+  font-size: 1rem;
+  font-weight: 500;
+  color: #e4e4e4;
+  padding-right: 2rem;
+}
+
+.input-box label {
+  position: absolute;
+  top: 50%;
+  left: 0%;
+  transform: translateY(-40%);
+  font-size: 1rem;
+  font-weight: 500;
+  pointer-events: none;
+  transition: 0.5s ease;
+}
+
+.input-box input:focus ~ label,
+.input-box input:valid ~ label {
+  top: -0.2rem;
+}
+
+.input-box .icon {
+  position: absolute;
+  right: 0.5rem;
+  top: 0.8rem;
+  font-size: 1.2rem;
+}
+
+.form-box .remember-forgot {
+  font-size: 0.9rem;
+  font-weight: 500;
+  margin: -0.95rem 0 0.95rem;
+  display: flex;
+  justify-content: space-between;
+}
+
+.remember-forgot label input {
+  color: #e4e4e4;
+  margin-right: 5px;
+}
+
+.remember-forgot a {
+  color: #e4e4e4;
+}
+
+.remember-forgot a:hover {
+  text-decoration: underline;
+}
+
+.btn {
+  width: 100%;
+  height: 2.8rem;
+  background: #c4103d;
+  border: none;
+  outline: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1rem;
+  color: #e4e4e4;
+  font-weight: 500;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.form-box .login-register {
+  font-size: 0.9rem;
+  font-weight: 500;
+  text-align: center;
+  margin-top: 1.5rem;
+}
+
+.login-register p {
+  display: flex;
+  justify-content: space-around;
+}
+
+.login-register p a {
+  color: #e4e4e4;
+  font-weight: 500;
+}
+
+.login-register p a:hover {
+  text-decoration: underline;
+}

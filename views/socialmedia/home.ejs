@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Home Page</title>
+    <link rel="stylesheet" href="/stylesheets/homePage.css" />
+    <link
+      rel="stylesheet"
+      href="https://unicons.iconscout.com/release/v4.0.8/css/line.css"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body>
+    <header class="header">
+      <nav class="navbar">
+        <a href="/" class="nav-link">Home</a>
+        <a href="/feed" class="nav-link">My Feed</a>
+        <a href="/feed/new" class="nav-link">New Post</a>
+        <a href="#" class="nav-link">Login</a>
+      </nav>
+
+      <form action="#" class="search-bar">
+        <input type="text" name="search" id="search" placeholder="Search" />
+        <button type="submit">
+          <i class="uil uil-search"></i>
+        </button>
+      </form>
+    </header>
+
+    <div class="background"></div>
+
+    <div class="container">
+      <div class="content">
+        <h2 class="logo"><i class="uil uil-fire"></i>YelpCamp</h2>
+        <div class="text-sci">
+          <h2>Welcome! <br /><span>To Our new website</span></h2>
+
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum aut
+            suscipit in voluptatibus esse exercitationem sequi expedita,
+          </p>
+
+          <div class="social-icons">
+            <a href="#" class="icons"><i class="uil uil-facebook"></i></a
+            ><a href="#" class="icons"><i class="uil uil-linkedin"></i></a
+            ><a href="#" class="icons"><i class="uil uil-twitter-alt"></i></a
+            ><a href="#" class="icons"><i class="uil uil-instagram"></i></a>
+          </div>
+        </div>
+      </div>
+      <div class="logreg-box">
+        <div class="form-box login">
+          <form action="#">
+            <h2>Sign In</h2>
+
+            <div class="input-box">
+              <span class="icon"><i class="uil uil-envelope"></i></span>
+              <input type="email" name="email" id="email" required />
+              <label for="email">Email</label>
+            </div>
+
+            <div class="input-box">
+              <span class="icon"><i class="uil uil-lock"></i></span>
+              <input type="password" name="password" id="password" required />
+              <label for="password">Password</label>
+            </div>
+
+            <div class="remember-forgot">
+              <label><input type="checkbox" />Remember Me</label>
+              <a href="#">Forgot Password?</a>
+            </div>
+
+            <button class="btn" type="submit">Sign In</button>
+
+            <div class="login-register">
+              <p>
+                Don't have an account?
+                <a href="#" class="register-link">Sign Up</a>
+              </p>
+            </div>
+          </form>
+        </div>
+
+        <div class="form-box register">
+          <form action="#">
+            <h2>Sign Up</h2>
+
+            <div class="input-box">
+              <span class="icon"><i class="uil uil-user"></i></span>
+              <input type="text" name="name" id="name" required />
+              <label for="name">Name</label>
+            </div>
+
+            <div class="input-box">
+              <span class="icon"><i class="uil uil-envelope"></i></span>
+              <input type="email" name="email" id="email" required />
+              <label for="email">Email</label>
+            </div>
+
+            <div class="input-box">
+              <span class="icon"><i class="uil uil-lock"></i></span>
+              <input type="password" name="password" id="password" required />
+              <label for="password">Password</label>
+            </div>
+
+            <div class="remember-forgot">
+              <label
+                ><input type="checkbox" />I agree to terms and conditions</label
+              >
+            </div>
+
+            <button class="btn" type="submit">Sign Up</button>
+
+            <div class="login-register">
+              <p>
+                Already have an account?
+                <a href="#" class="login-link">Sign In</a>
+              </p>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <script
+      src="https://kit.fontawesome.com/cf25c07412.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <script src="/javascripts/homePage.js"></script>
+  </body>
+</html>
