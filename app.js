@@ -12,6 +12,8 @@ const localStrategy = require("passport-local");
 const Post = require("./models/post");
 const User = require("./models/user");
 
+const ExpressError = require("./utils/ExpressError");
+
 const dbUrl = "mongodb://localhost:27017/social-media";
 
 mongoose.connect(dbUrl, {});
@@ -64,7 +66,7 @@ app.use((req, res, next) => {
 
 // Home Route
 app.get("/", (req, res) => {
-  res.render("socialmedia/parallaxHome");
+  res.render("socialmedia/home");
 });
 
 // Index Route
@@ -105,6 +107,17 @@ app.delete("/feed/:id", async (req, res) => {
   const { id } = req.params;
   const post = await Post.findOneAndDelete(id);
   res.redirect("/feed");
+});
+
+app.all("*", (req, res, next) => {
+  next(new ExpressError("Page Not Found", 404));
+});
+
+// Error Middleware
+app.use((err, req, res, next) => {
+  const { statusCode = 500 } = err;
+  if (!err.message) err.message = "Oh no an error occurred";
+  res.status(statusCode).render("error", { err });
 });
 
 const port = "3001";
